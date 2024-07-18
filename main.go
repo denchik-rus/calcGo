@@ -76,8 +76,8 @@ func isRomans(num string) bool {
 
 	var romanNumerals = []string{"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"}
 
-	for _, l := range  romanNumerals {
-		if num == l {
+	for _, val := range  romanNumerals {
+		if num == val {
 			return true
 		}
 	}
@@ -126,9 +126,9 @@ func getDataType(text string, op string) (a, b int, isRoman bool, err error) {
 		}
 	}
 
-	if a < 0 || a > 10 || b < 0 || b > 10 {
+	if a < 1 || a > 10 || b < 1 || b > 10 {
 
-		return a, b, isRoman, fmt.Errorf("a <= 0 or a > 10 or b <= 0 or b > 10")
+		return a, b, isRoman, fmt.Errorf("a < 1 or a > 10 or b < 1 or b > 10")
 	}
 
 	return a, b, isRoman, nil
