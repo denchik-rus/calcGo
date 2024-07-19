@@ -222,8 +222,8 @@ func main() {
 		}
 
 		if isRoman {
-			if result < 0 {
-				panic("result < 0 !!!")
+			if result <= 0 {
+				panic("result <= 0 !!!")
 			}
 
 			res := intToRomanNum(result)
